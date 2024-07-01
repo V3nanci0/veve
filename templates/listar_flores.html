@@ -1,0 +1,36 @@
+{% extends 'main_template.html' %}
+
+{% block header %}
+  <h1>{% block title %}Listagem de Flores{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  
+<p>
+    <a href="{{ url_for("form_adicionar_flor") }}">Cadastrar nova Flor</a>
+</p>
+
+<table border="1">
+    <tr>
+        <td>Flor</td>
+        <td>Nome Científico</td>
+        <td>Gênero</td>
+        <td>Época de floração</td>
+        <td>Nativa</td>
+        <td>Reino</td>
+    </tr>
+
+    {% for p in flores %}
+    <tr> 
+        <td>{{p.flor}}</td>
+        <td>{{p.nomeCientifico}}</td>
+        <td>{{p.genero}}</td>
+        <td>{{p.epocaFloraçao}}</td>
+        <td>{{p.nativa}}</td>
+        <td>{{p.reino}}</td>
+    </tr>
+    {% endfor %}
+   
+</table>
+
+{% endblock %}

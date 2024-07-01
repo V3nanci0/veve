@@ -1,0 +1,16 @@
+{% extends 'main_template.html' %} {% block header %}
+<h1>{% block title %}Cadastrar Flor{% endblock %}</h1>
+{% endblock %} {% block content %}
+
+<form action="adicionar_flor">
+  <p>Flor: <input type="text" name="flor" value="Jasmim Manga" /></p>
+  <p>Nome Científico: <input type="text" name="nomeCientifico" value="Plumeria Rubra" /></p>
+  <p>Gênero: <input type="text" name="genero" value="Plumeria" /></p>
+  <p>Época de floração: <input type="text" name="epocaFloraçao" value="Primavera" /></p>
+  <p>Nativa: <input type="text" name="nativa" value="América Central" /></p>
+  <p>Reino: <input type="text" name="reino" value="Plantae" /></p>
+
+  <button>Cadastrar</button>
+</form>
+
+{% endblock %}
